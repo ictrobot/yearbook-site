@@ -34,7 +34,7 @@
     </b-row>
     <b-row>
       <b-col cols="12" sm="8">
-        <b-alert v-for="comment in comments" :key="comment.user_id" show variant="secondary">
+        <b-alert v-for="comment in comments" :key="comment.user_id + comment.message" show variant="secondary">
           <p>{{ comment.message }}</p>
           <p style="text-align: right">
             <a :href="'../' + encodeURI(comment.user_name) + '/'"><i class="text-muted">{{ comment.user_name }}</i></a>
